@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Commerce Price Tracker</title>
+</head>
+<body>
+
+<h1>E-Commerce Price Tracker</h1>
+
+<table border="1" cellpadding="8">
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for pid, name, price, date in data %}
+        <tr>
+            <td><a href="/chart/{{ pid }}">{{ name }}</a></td>
+            <td>{{ price }}</td>
+            <td>{{ date }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
